@@ -18,6 +18,7 @@
     "group"
   ],
   "license": "MIT",
+  "icon": "images/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/lgenzelis/tab-project-grouper"
