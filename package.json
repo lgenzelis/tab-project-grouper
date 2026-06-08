@@ -18,6 +18,10 @@
     "group"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lgenzelis/tab-project-grouper"
+  },
   "main": "./out/extension.js",
   "activationEvents": [
     "onStartupFinished"
