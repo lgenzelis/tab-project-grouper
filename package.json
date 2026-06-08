@@ -1,0 +1,53 @@
+{
+  "name": "tab-project-grouper",
+  "displayName": "Tab Project Grouper",
+  "description": "In multi-root workspaces, keeps editor tabs grouped by their project (workspace folder). When you open a file, its tab slides next to other tabs from the same project.",
+  "version": "0.0.1",
+  "publisher": "lgenzelis",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "tabs",
+    "editor tabs",
+    "multi-root",
+    "workspace",
+    "group"
+  ],
+  "license": "MIT",
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "tabProjectGrouper.regroupAll",
+        "title": "Tab Project Grouper: Regroup all tabs by project"
+      }
+    ],
+    "configuration": {
+      "title": "Tab Project Grouper",
+      "properties": {
+        "tabProjectGrouper.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically reposition a newly opened tab next to other tabs from the same project."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.x",
+    "typescript": "^5.4.0"
+  }
+}
