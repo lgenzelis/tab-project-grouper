@@ -51,23 +51,13 @@ to see them group.
 
 - `tabProjectGrouper.enabled` (default `true`) — toggle automatic repositioning.
 
-## Source & deployment
+## Publishing
 
-This directory is the editable **source**, kept in
-`~/vscode_lgenzelis_extensions/tab-project-grouper/` — separate from the
-**installed** copy VS Code loads
-(`~/.vscode/extensions/lgenzelis.tab-project-grouper-0.0.1/`).
-
-Unlike the other two extensions, this is a TypeScript project. To compile and
-deploy your edits to the installed copy in one step:
+This extension is published on the VS Code Marketplace; install it from there
+for normal use. To package or publish a new version, bump `version` in
+`package.json` and use [`vsce`](https://github.com/microsoft/vscode-vsce):
 
 ```bash
-./deploy.sh
+vsce package    # builds a .vsix you can install locally with --install-extension
+vsce publish    # publishes to the Marketplace
 ```
-
-`deploy.sh` runs `npm run compile` (`src/` → `out/`), then installs a flat
-runtime copy: it copies `out/extension.js`, `README.md`, and a `package.json`
-with `main` rewritten to `./extension.js` (and `scripts`/`devDependencies`
-stripped) into `~/.vscode/extensions/<publisher>.<name>-<version>/`. Reload VS
-Code afterward (`Cmd+Shift+P → Developer: Reload Window`). Bumping `version` in
-`package.json` creates a new versioned install folder.

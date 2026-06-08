@@ -4,5 +4,4 @@ src/**
 **/*.map
 tsconfig.json
 .gitignore
-deploy.sh
 node_modules/**
