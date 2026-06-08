@@ -18,6 +18,11 @@ echo "Deploying ${PUBLISHER}.${NAME}@${VERSION} -> $DEST"
 mkdir -p "$DEST"
 cp out/extension.js "$DEST/extension.js"
 cp README.md "$DEST/README.md"
+# Copy the icon if the manifest references one (keeps its relative path).
+if [ -f images/icon.png ]; then
+  mkdir -p "$DEST/images"
+  cp images/icon.png "$DEST/images/icon.png"
+fi
 # Copy the manifest, but force main to the flat layout used in the install dir.
 python3 -c "
 import json

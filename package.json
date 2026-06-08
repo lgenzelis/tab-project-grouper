@@ -2,7 +2,7 @@
   "name": "tab-project-grouper",
   "displayName": "Tab Project Grouper",
   "description": "In multi-root workspaces, keeps editor tabs grouped by their project (workspace folder). When you open a file, its tab slides next to other tabs from the same project.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "lgenzelis",
   "engines": {
     "vscode": "^1.85.0"
